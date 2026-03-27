@@ -1,4 +1,4 @@
-# RUL Prediction on NASA C-MAPSS
+# Remaining Useful Life prediction using deep learning models on NASA C-MAPSS and synthetic degradation datasets, with uncertainty-aware evaluation for maintenance decision support
 
 Remaining Useful Life prediction using deep learning models with uncertainty-aware evaluation for maintenance decision support.
 
