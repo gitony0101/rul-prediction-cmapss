@@ -14,7 +14,6 @@ The project focuses on:
 
 ## Methods
 
-- Bi-LSTM
 - CNN-BiLSTM
 - MSE Loss
 - LinEx Loss
