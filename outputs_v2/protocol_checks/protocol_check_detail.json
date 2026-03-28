@@ -1,0 +1,1242 @@
+[
+  {
+    "group": "G1",
+    "status": "PASS",
+    "group_dir": "outputs_v2/G1_CNN_BiLSTM_MSE",
+    "num_runs": 5,
+    "pass_count": 5,
+    "fail_count": 0,
+    "runs": [
+      {
+        "group": "G1",
+        "run_dir": "seed_123",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 22
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G1",
+        "run_dir": "seed_21",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 24
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G1",
+        "run_dir": "seed_42",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 21
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G1",
+        "run_dir": "seed_7",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 22
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G1",
+        "run_dir": "seed_87",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 28
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      }
+    ]
+  },
+  {
+    "group": "G2",
+    "status": "PASS",
+    "group_dir": "outputs_v2/G2_CNN_BiLSTM_MSE_MCD",
+    "num_runs": 5,
+    "pass_count": 5,
+    "fail_count": 0,
+    "runs": [
+      {
+        "group": "G2",
+        "run_dir": "seed_123",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 27
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G2",
+        "run_dir": "seed_21",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 29
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G2",
+        "run_dir": "seed_42",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 43
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G2",
+        "run_dir": "seed_7",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 38
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G2",
+        "run_dir": "seed_87",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 42
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      }
+    ]
+  },
+  {
+    "group": "G3",
+    "status": "PASS",
+    "group_dir": "outputs_v2/G3_CNN_BiLSTM_LinEx",
+    "num_runs": 5,
+    "pass_count": 5,
+    "fail_count": 0,
+    "runs": [
+      {
+        "group": "G3",
+        "run_dir": "seed_123_a_0.04",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 22
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G3",
+        "run_dir": "seed_21_a_0.04",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 22
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G3",
+        "run_dir": "seed_42_a_0.04",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 22
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G3",
+        "run_dir": "seed_7_a_0.04",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 27
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G3",
+        "run_dir": "seed_87_a_0.04",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 33
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      }
+    ]
+  },
+  {
+    "group": "G4",
+    "status": "PASS",
+    "group_dir": "outputs_v2/G4_CNN_BiLSTM_LinEx_MCD",
+    "num_runs": 5,
+    "pass_count": 5,
+    "fail_count": 0,
+    "runs": [
+      {
+        "group": "G4",
+        "run_dir": "seed_123_a_0.04",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 54
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G4",
+        "run_dir": "seed_21_a_0.04",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 58
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G4",
+        "run_dir": "seed_42_a_0.04",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 55
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G4",
+        "run_dir": "seed_7_a_0.04",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 38
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      },
+      {
+        "group": "G4",
+        "run_dir": "seed_87_a_0.04",
+        "status": "PASS",
+        "issues": [],
+        "file_presence": {
+          "best_model.pth": true,
+          "last_model.pth": true,
+          "train_history.csv": true,
+          "predictions.csv": true,
+          "config.json": true,
+          "normalizer.json": true,
+          "split_units.json": true,
+          "val_metrics.json": true,
+          "test_metrics.json": true,
+          "best_summary.json": true
+        },
+        "config_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "val_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "test_metrics_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "best_summary_check": {
+          "exists": true,
+          "missing_keys": [],
+          "extra_keys": []
+        },
+        "predictions_check": {
+          "exists": true,
+          "missing_columns": [],
+          "extra_columns": [
+            "unit_id",
+            "cycle",
+            "window_end_cycle",
+            "window_mode"
+          ],
+          "num_rows": 100
+        },
+        "train_history_check": {
+          "exists": true,
+          "missing_columns": [],
+          "num_rows": 66
+        },
+        "split_units_check": {
+          "exists": true,
+          "missing_keys": [],
+          "train_units_count": 80,
+          "val_units_count": 20
+        }
+      }
+    ]
+  }
+]

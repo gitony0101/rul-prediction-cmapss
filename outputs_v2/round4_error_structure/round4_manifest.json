@@ -1,0 +1,19 @@
+{
+  "config": {
+    "groups": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "danger_threshold": 20.0,
+    "severe_error_threshold": 10.0,
+    "moderate_error_threshold": 5.0,
+    "rul_bins": [
+      0.0,
+      20.0,
+      50.0,
+      125.0
+    ]
+  }
+}

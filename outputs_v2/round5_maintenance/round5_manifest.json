@@ -1,0 +1,25 @@
+{
+  "config": {
+    "groups": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "thresholds": [
+      5.0,
+      10.0,
+      15.0,
+      20.0,
+      25.0,
+      30.0,
+      35.0,
+      40.0
+    ],
+    "preventive_cost": 1.0,
+    "failure_cost": 10.0,
+    "early_cost_per_cycle": 0.05,
+    "batch_size_override": null,
+    "mc_samples_override": null
+  }
+}

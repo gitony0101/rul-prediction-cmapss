@@ -1,0 +1,66 @@
+{
+  "group": "G4",
+  "scenario": "A_sigma_5",
+  "seed": 0,
+  "a_tag": "a_0p09",
+  "linex_a": 0.09,
+  "best_epoch": 11,
+  "best_val_rmse": 5.243849754333496,
+  "train_run_id": "20260328_001746_806242",
+  "train_config": {
+    "output_root": "outputs_v2/round8_toy_mechanism",
+    "sequence_length": 50,
+    "batch_size": 256,
+    "epochs": 20,
+    "lr": 0.001,
+    "weight_decay": 1e-05,
+    "hidden_size": 64,
+    "lstm_layers": 2,
+    "dropout": 0.2,
+    "cnn_channels": 64,
+    "cnn_kernel_size": 5,
+    "dense_size": 64,
+    "grad_clip": 5.0,
+    "mcd_samples": 50,
+    "linex_a": 0.04,
+    "seed_list": [
+      0,
+      1,
+      2
+    ],
+    "num_workers": 0
+  },
+  "metrics": {
+    "rmse": 4.967739582061768,
+    "mae": 3.8286349773406982,
+    "nasa": 2167.30810546875,
+    "bias": -1.7817494869232178,
+    "over_rate": 0.34913112164297,
+    "danger_over_5": 0.059044233807266984,
+    "danger_over_10": 0.007503949447077409,
+    "pred_std_mean": 5.395879745483398,
+    "pred_std_p90": 9.668345165252685
+  },
+  "group_settings": {
+    "loss": "linex",
+    "use_mcd": true
+  },
+  "scaler": {
+    "mean": [
+      0.5336688160896301,
+      -0.0053470199927687645,
+      0.4236750900745392,
+      0.5283626914024353,
+      0.2664426565170288,
+      0.0009800913976505399
+    ],
+    "std": [
+      0.3297370672225952,
+      0.001761515042744577,
+      0.4001171588897705,
+      0.4096904993057251,
+      0.2960934638977051,
+      0.04338177293539047
+    ]
+  }
+}

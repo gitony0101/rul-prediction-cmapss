@@ -1,0 +1,28 @@
+{
+  "num_runs": 5,
+  "unique_dataset_name": [
+    "FD001"
+  ],
+  "unique_seq_len": [
+    50
+  ],
+  "unique_validation_ratio": [
+    0.2
+  ],
+  "unique_batch_size": [
+    128
+  ],
+  "unique_linex_a": [],
+  "unique_dropout_rate": [
+    0.5
+  ],
+  "unique_mc_samples_val": [
+    10
+  ],
+  "unique_mc_samples_test": [
+    20
+  ],
+  "missing_required_test_metrics": [],
+  "missing_required_val_metrics": [],
+  "has_uncertainty_metrics": true
+}

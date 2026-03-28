@@ -1,0 +1,459 @@
+{
+  "fleet_size": 20,
+  "maintenance_capacity": 4,
+  "mission_horizon": 30,
+  "decision_rounds": 40,
+  "maint_count": 160,
+  "early_count": 30,
+  "fail_count": 43,
+  "total_cost": 1080.0,
+  "maintenance_utilization": 1.0,
+  "round_logs": [
+    {
+      "round": 1,
+      "maintained_units": [
+        241,
+        261,
+        267,
+        278
+      ],
+      "avg_risk": 0.0004025319417238493,
+      "avg_survival_prob": 0.9995974680582762
+    },
+    {
+      "round": 2,
+      "maintained_units": [
+        256,
+        266,
+        270,
+        277
+      ],
+      "avg_risk": 0.062111626766436334,
+      "avg_survival_prob": 0.9378883732335638
+    },
+    {
+      "round": 3,
+      "maintained_units": [
+        252,
+        253,
+        260,
+        269
+      ],
+      "avg_risk": 0.2052573712158771,
+      "avg_survival_prob": 0.7947426287841228
+    },
+    {
+      "round": 4,
+      "maintained_units": [
+        248,
+        257,
+        264,
+        278
+      ],
+      "avg_risk": 0.41843927638285716,
+      "avg_survival_prob": 0.5815607236171427
+    },
+    {
+      "round": 5,
+      "maintained_units": [
+        241,
+        243,
+        256,
+        277
+      ],
+      "avg_risk": 0.09717548064775991,
+      "avg_survival_prob": 0.9028245193522402
+    },
+    {
+      "round": 6,
+      "maintained_units": [
+        253,
+        266,
+        269,
+        270
+      ],
+      "avg_risk": 0.15941374857486354,
+      "avg_survival_prob": 0.8405862514251364
+    },
+    {
+      "round": 7,
+      "maintained_units": [
+        252,
+        260,
+        261,
+        278
+      ],
+      "avg_risk": 0.21847042831462177,
+      "avg_survival_prob": 0.7815295716853783
+    },
+    {
+      "round": 8,
+      "maintained_units": [
+        254,
+        257,
+        264,
+        277
+      ],
+      "avg_risk": 0.15202266978102513,
+      "avg_survival_prob": 0.8479773302189748
+    },
+    {
+      "round": 9,
+      "maintained_units": [
+        256,
+        269,
+        271,
+        275
+      ],
+      "avg_risk": 0.33184243383741124,
+      "avg_survival_prob": 0.6681575661625887
+    },
+    {
+      "round": 10,
+      "maintained_units": [
+        243,
+        261,
+        270,
+        278
+      ],
+      "avg_risk": 0.21501400422962952,
+      "avg_survival_prob": 0.7849859957703705
+    },
+    {
+      "round": 11,
+      "maintained_units": [
+        252,
+        260,
+        266,
+        277
+      ],
+      "avg_risk": 0.15205259240742078,
+      "avg_survival_prob": 0.8479474075925794
+    },
+    {
+      "round": 12,
+      "maintained_units": [
+        254,
+        257,
+        264,
+        269
+      ],
+      "avg_risk": 0.24444861133946794,
+      "avg_survival_prob": 0.7555513886605321
+    },
+    {
+      "round": 13,
+      "maintained_units": [
+        248,
+        256,
+        261,
+        278
+      ],
+      "avg_risk": 0.2589995750863559,
+      "avg_survival_prob": 0.7410004249136442
+    },
+    {
+      "round": 14,
+      "maintained_units": [
+        252,
+        270,
+        271,
+        275
+      ],
+      "avg_risk": 0.1556827386551201,
+      "avg_survival_prob": 0.8443172613448798
+    },
+    {
+      "round": 15,
+      "maintained_units": [
+        253,
+        260,
+        269,
+        277
+      ],
+      "avg_risk": 0.23684368382885604,
+      "avg_survival_prob": 0.763156316171144
+    },
+    {
+      "round": 16,
+      "maintained_units": [
+        257,
+        264,
+        266,
+        278
+      ],
+      "avg_risk": 0.31843919042926794,
+      "avg_survival_prob": 0.6815608095707321
+    },
+    {
+      "round": 17,
+      "maintained_units": [
+        241,
+        252,
+        256,
+        270
+      ],
+      "avg_risk": 0.09935654924879048,
+      "avg_survival_prob": 0.9006434507512096
+    },
+    {
+      "round": 18,
+      "maintained_units": [
+        253,
+        269,
+        276,
+        277
+      ],
+      "avg_risk": 0.13351051535320518,
+      "avg_survival_prob": 0.8664894846467949
+    },
+    {
+      "round": 19,
+      "maintained_units": [
+        260,
+        261,
+        271,
+        278
+      ],
+      "avg_risk": 0.26792083384455573,
+      "avg_survival_prob": 0.7320791661554442
+    },
+    {
+      "round": 20,
+      "maintained_units": [
+        243,
+        254,
+        257,
+        264
+      ],
+      "avg_risk": 0.19656710914911343,
+      "avg_survival_prob": 0.8034328908508865
+    },
+    {
+      "round": 21,
+      "maintained_units": [
+        252,
+        256,
+        266,
+        270
+      ],
+      "avg_risk": 0.34162254240295165,
+      "avg_survival_prob": 0.6583774575970484
+    },
+    {
+      "round": 22,
+      "maintained_units": [
+        248,
+        261,
+        277,
+        278
+      ],
+      "avg_risk": 0.21385439014543012,
+      "avg_survival_prob": 0.7861456098545698
+    },
+    {
+      "round": 23,
+      "maintained_units": [
+        254,
+        257,
+        260,
+        264
+      ],
+      "avg_risk": 0.05003225726563676,
+      "avg_survival_prob": 0.9499677427343632
+    },
+    {
+      "round": 24,
+      "maintained_units": [
+        253,
+        269,
+        271,
+        275
+      ],
+      "avg_risk": 0.1981016473753608,
+      "avg_survival_prob": 0.801898352624639
+    },
+    {
+      "round": 25,
+      "maintained_units": [
+        252,
+        256,
+        270,
+        278
+      ],
+      "avg_risk": 0.35797696115148037,
+      "avg_survival_prob": 0.6420230388485196
+    },
+    {
+      "round": 26,
+      "maintained_units": [
+        257,
+        260,
+        266,
+        277
+      ],
+      "avg_risk": 0.10004112979757182,
+      "avg_survival_prob": 0.8999588702024282
+    },
+    {
+      "round": 27,
+      "maintained_units": [
+        253,
+        254,
+        264,
+        269
+      ],
+      "avg_risk": 0.23148029173394877,
+      "avg_survival_prob": 0.7685197082660512
+    },
+    {
+      "round": 28,
+      "maintained_units": [
+        252,
+        261,
+        267,
+        278
+      ],
+      "avg_risk": 0.12264213680969212,
+      "avg_survival_prob": 0.8773578631903078
+    },
+    {
+      "round": 29,
+      "maintained_units": [
+        256,
+        270,
+        271,
+        275
+      ],
+      "avg_risk": 0.24666499220600663,
+      "avg_survival_prob": 0.7533350077939934
+    },
+    {
+      "round": 30,
+      "maintained_units": [
+        257,
+        260,
+        269,
+        277
+      ],
+      "avg_risk": 0.2868129295787346,
+      "avg_survival_prob": 0.7131870704212654
+    },
+    {
+      "round": 31,
+      "maintained_units": [
+        254,
+        264,
+        266,
+        278
+      ],
+      "avg_risk": 0.3180475341307845,
+      "avg_survival_prob": 0.6819524658692155
+    },
+    {
+      "round": 32,
+      "maintained_units": [
+        252,
+        256,
+        269,
+        270
+      ],
+      "avg_risk": 0.05000093552717465,
+      "avg_survival_prob": 0.9499990644728253
+    },
+    {
+      "round": 33,
+      "maintained_units": [
+        241,
+        253,
+        257,
+        277
+      ],
+      "avg_risk": 0.0933871197109429,
+      "avg_survival_prob": 0.9066128802890571
+    },
+    {
+      "round": 34,
+      "maintained_units": [
+        260,
+        261,
+        271,
+        278
+      ],
+      "avg_risk": 0.26789016428481227,
+      "avg_survival_prob": 0.7321098357151878
+    },
+    {
+      "round": 35,
+      "maintained_units": [
+        243,
+        254,
+        264,
+        269
+      ],
+      "avg_risk": 0.19484269926978112,
+      "avg_survival_prob": 0.8051573007302189
+    },
+    {
+      "round": 36,
+      "maintained_units": [
+        252,
+        256,
+        266,
+        270
+      ],
+      "avg_risk": 0.28525608933497365,
+      "avg_survival_prob": 0.7147439106650264
+    },
+    {
+      "round": 37,
+      "maintained_units": [
+        257,
+        261,
+        277,
+        278
+      ],
+      "avg_risk": 0.2636017487612586,
+      "avg_survival_prob": 0.7363982512387415
+    },
+    {
+      "round": 38,
+      "maintained_units": [
+        254,
+        260,
+        264,
+        269
+      ],
+      "avg_risk": 0.09827709183006898,
+      "avg_survival_prob": 0.901722908169931
+    },
+    {
+      "round": 39,
+      "maintained_units": [
+        252,
+        253,
+        271,
+        275
+      ],
+      "avg_risk": 0.14982596411498375,
+      "avg_survival_prob": 0.8501740358850164
+    },
+    {
+      "round": 40,
+      "maintained_units": [
+        256,
+        261,
+        270,
+        278
+      ],
+      "avg_risk": 0.30826054481706294,
+      "avg_survival_prob": 0.691739455182937
+    }
+  ],
+  "group": "G4",
+  "scenario": "A_sigma_1",
+  "seed": 2,
+  "a_tag": "a_0p09",
+  "linex_a": 0.09,
+  "maintenance_run_id": "20260328_080536_123217"
+}

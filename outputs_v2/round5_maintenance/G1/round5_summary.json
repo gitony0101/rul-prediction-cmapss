@@ -1,0 +1,17 @@
+{
+  "group": "G1",
+  "num_thresholds": 8,
+  "best_threshold": 10.0,
+  "best_total_cost_mean": 4.9385,
+  "best_total_cost_std": 4.397185776152742,
+  "best_failure_event_mean": 0.43,
+  "best_failure_event_std": 0.4950757517794625,
+  "best_unnecessary_maintenance_mean": 0.45,
+  "best_unnecessary_maintenance_std": 0.49749371855331,
+  "best_preventive_action_mean": 0.57,
+  "best_preventive_action_std": 0.49507575177946245,
+  "best_protected_danger_mean": 0.57,
+  "best_protected_danger_std": 0.49507575177946245,
+  "best_early_lead_mean": 1.37,
+  "best_early_lead_std": 2.2210583063035516
+}
