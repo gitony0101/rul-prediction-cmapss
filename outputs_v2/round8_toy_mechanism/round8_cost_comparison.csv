@@ -1,4 +1,0 @@
-scenario,noise_level,G1,G2,G3_best,G4_best
-A_sigma_1,low,,,776.67 (a=0.05),663.33 (a=0.10)
-A_sigma_3,mid,,,965.33 (a=0.03),835.33 (a=0.07)
-A_sigma_5,high,,,944.00 (a=0.05),732.67 (a=0.05)
