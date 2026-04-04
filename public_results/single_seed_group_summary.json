@@ -1,0 +1,58 @@
+[
+  {
+    "group": "G1",
+    "seed": 42,
+    "dataset_name": "FD001",
+    "num_epochs": 1,
+    "best_epoch": 1,
+    "rmse": 73.15264048610179,
+    "mae": 61.94954993247986,
+    "nasa": 122381.65949170431,
+    "linex_a": null,
+    "mc_samples_test": null,
+    "pred_std_mean": null,
+    "best_val_rmse": 82.264143908627
+  },
+  {
+    "group": "G2",
+    "seed": 42,
+    "dataset_name": "FD001",
+    "num_epochs": 1,
+    "best_epoch": 1,
+    "rmse": 70.39070779284269,
+    "mae": 59.282935581207276,
+    "nasa": 95807.84167748137,
+    "linex_a": null,
+    "mc_samples_test": 2,
+    "pred_std_mean": 1.746309518814087,
+    "best_val_rmse": 79.21377229748335
+  },
+  {
+    "group": "G3",
+    "seed": 42,
+    "dataset_name": "FD001",
+    "num_epochs": 1,
+    "best_epoch": 1,
+    "rmse": 70.50940722016551,
+    "mae": 59.3599413394928,
+    "nasa": 95726.55314946262,
+    "linex_a": 0.04,
+    "mc_samples_test": null,
+    "pred_std_mean": null,
+    "best_val_rmse": 79.52904896877646
+  },
+  {
+    "group": "G4",
+    "seed": 42,
+    "dataset_name": "FD001",
+    "num_epochs": 1,
+    "best_epoch": 1,
+    "rmse": 68.32291132271746,
+    "mae": 57.447800931930544,
+    "nasa": 78815.81720239604,
+    "linex_a": 0.04,
+    "mc_samples_test": 2,
+    "pred_std_mean": 2.246657609939575,
+    "best_val_rmse": 76.69787981163424
+  }
+]
