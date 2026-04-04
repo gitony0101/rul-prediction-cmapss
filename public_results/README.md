@@ -1,16 +1,28 @@
 # Public Results Summary
 
-This directory contains a curated selection of experimental results intended for a high-level overview of the project. The goal is to provide clear, impactful evidence of the project's findings without the clutter of individual seed-level logs.
+This directory contains curated, employer-facing evidence from the project in two parallel surfaces:
+
+- **Curated multiseed results**: higher-rigor summary artifacts used to compare G1 through G4 across repeated runs.
+- **Single-seed local verification summaries**: compact records from successful local end-to-end executions used to verify runnable baseline behavior.
+
+The multiseed artifacts remain the stronger evidence surface for comparative performance. The single-seed artifacts are included for execution verification and repository credibility, not as a replacement for multiseed rigor.
+
+`outputs/` should be treated as the raw generated-output archive for local runs. `public_results/` is the curated evidence surface intended for review.
 
 ## Contents
 
-- **`group_comparison.csv`**: The primary comparison of all experimental groups (G1 through G4) across key metrics like RMSE and MAE.
-- **`G1_multiseed_summary.json`**, **`G2_multiseed_summary.json`**, **`G3_multiseed_summary.json`**, **`G4_multiseed_summary.json`**: Summary statistics for each major experimental configuration, capturing the mean performance across multiple random seeds.
-- **`G4_multiseed_detail.csv`**: A detailed breakdown of the best-performing configuration (LinEx + MC Dropout), showing the performance variation across seeds.
+### Multiseed Curated Results
 
-## Selection Criteria
+- **`group_comparison.csv`**: Primary comparison of all experimental groups across key metrics.
+- **`G1_multiseed_summary.json`**, **`G2_multiseed_summary.json`**, **`G3_multiseed_summary.json`**, **`G4_multiseed_summary.json`**: Summary statistics for each major configuration across multiple random seeds.
+- **`G4_multiseed_detail.csv`**: Detailed breakdown of the best-performing configuration across seeds.
 
-Files were selected based on their ability to:
-1. Provide an immediate, high-level comparison of the different methodologies.
-2. Demonstrate the statistical significance and consistency of the results through multi-seed summaries.
-3. Highlight the superior performance of the final proposed configuration (G4).
+### Single-Seed Local Verification Summaries
+
+- **`single_seed_group_comparison.csv`**: Compact single-seed comparison across G1 through G4 from verified local end-to-end runs.
+- **`single_seed_group_summary.json`**: Machine-readable per-group summary of the same single-seed verification runs.
+- **`single_seed_uncertainty_summary.csv`**: Compact uncertainty summary for the MC Dropout configurations (G2 and G4).
+
+## Interpretation
+
+Use the multiseed artifacts when evaluating comparative performance claims. Use the single-seed artifacts when evaluating local runnability and end-to-end execution integrity.

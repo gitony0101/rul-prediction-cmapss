@@ -125,7 +125,7 @@ def main() -> None:
             print(f"Run failed for {cfg.group}, seed={seed}")
             break
 
-    out_dir = _PROJECT_ROOT / "outputs_v2" / f"{cfg.group}_multiseed_logs"
+    out_dir = _PROJECT_ROOT / "outputs" / f"{cfg.group}_multiseed_logs"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     with open(
@@ -140,7 +140,7 @@ def main() -> None:
             indent=2,
         )
 
-    print(f"\nMulti-seed run log saved to: outputs_v2/{cfg.group}_multiseed_logs")
+    print(f"\nMulti-seed run log saved to: {out_dir}")
 
 
 if __name__ == "__main__":

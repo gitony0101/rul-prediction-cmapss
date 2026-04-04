@@ -49,7 +49,7 @@ class Config:
     seed: int = 42
 
     data_dir: str = "CMAPSSData"
-    output_root: str = "outputs_v2/G1_CNN_BiLSTM_MSE"
+    output_root: str = "outputs/G1_CNN_BiLSTM_MSE"
 
     seq_len: int = DEFAULT_SEQUENCE_LENGTH
     rul_cap: float = DEFAULT_RUL_CAP
@@ -333,7 +333,7 @@ def main():
     print(f"Best epoch: {best_epoch}")
     print(f"Best val RMSE: {best_val_rmse:.4f}")
     print(f"Test RMSE: {test_metrics['rmse']:.4f}")
-    print(f"Outputs saved to: outputs_v2/G1_CNN_BiLSTM_MSE/{Path(run_dir).name}")
+    print(f"Outputs saved to: {Path(run_dir)}")
 
 
 if __name__ == "__main__":

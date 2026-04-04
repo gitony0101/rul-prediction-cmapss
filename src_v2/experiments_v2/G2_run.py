@@ -52,7 +52,7 @@ class Config:
     seed: int = 42
 
     data_dir: str = "CMAPSSData"
-    output_root: str = "outputs_v2/G2_CNN_BiLSTM_MSE_MCD"
+    output_root: str = "outputs/G2_CNN_BiLSTM_MSE_MCD"
 
     seq_len: int = DEFAULT_SEQUENCE_LENGTH
     rul_cap: float = DEFAULT_RUL_CAP
@@ -372,7 +372,7 @@ def main():
     print(f"Best val RMSE: {best_val_rmse:.4f}")
     print(f"Test RMSE: {test_metrics['rmse']:.4f}")
     print(f"Test predictive std mean: {test_metrics['pred_std_mean']:.4f}")
-    print(f"Outputs saved to: outputs_v2/G2_CNN_BiLSTM_MSE_MCD/{Path(run_dir).name}")
+    print(f"Outputs saved to: {Path(run_dir)}")
 
 
 if __name__ == "__main__":

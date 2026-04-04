@@ -15,7 +15,7 @@ GROUPS = ["G1", "G2", "G3", "G4"]
 def get_summary_path(group: str) -> Path:
     return (
         _PROJECT_ROOT
-        / "outputs_v2"
+        / "outputs"
         / f"{group}_multiseed_logs"
         / f"{group}_multiseed_summary.json"
     )
@@ -66,13 +66,13 @@ def main() -> None:
             drop=True
         )
 
-    out_path = _PROJECT_ROOT / "outputs_v2" / "group_comparison.csv"
+    out_path = _PROJECT_ROOT / "outputs" / "group_comparison.csv"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(out_path, index=False)
 
     print("\n=== Group Comparison ===")
     print(df)
-    print("\nSaved to: outputs_v2/group_comparison.csv")
+    print(f"\nSaved to: {out_path}")
 
 
 if __name__ == "__main__":

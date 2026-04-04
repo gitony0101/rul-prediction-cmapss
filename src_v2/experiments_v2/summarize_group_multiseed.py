@@ -35,10 +35,10 @@ def apply_overrides(cfg: Config, args: argparse.Namespace) -> Config:
 
 def get_group_output_dir(group: str) -> Path:
     mapping = {
-        "G1": _PROJECT_ROOT / "outputs_v2" / "G1_CNN_BiLSTM_MSE",
-        "G2": _PROJECT_ROOT / "outputs_v2" / "G2_CNN_BiLSTM_MSE_MCD",
-        "G3": _PROJECT_ROOT / "outputs_v2" / "G3_CNN_BiLSTM_LinEx",
-        "G4": _PROJECT_ROOT / "outputs_v2" / "G4_CNN_BiLSTM_LinEx_MCD",
+        "G1": _PROJECT_ROOT / "outputs" / "G1_CNN_BiLSTM_MSE",
+        "G2": _PROJECT_ROOT / "outputs" / "G2_CNN_BiLSTM_MSE_MCD",
+        "G3": _PROJECT_ROOT / "outputs" / "G3_CNN_BiLSTM_LinEx",
+        "G4": _PROJECT_ROOT / "outputs" / "G4_CNN_BiLSTM_LinEx_MCD",
     }
     if group not in mapping:
         raise ValueError(f"Unsupported group: {group}")
@@ -202,7 +202,7 @@ def main() -> None:
     protocol = check_protocol_consistency(df)
     summary = build_summary(df, cfg.group)
 
-    out_dir = _PROJECT_ROOT / "outputs_v2" / f"{cfg.group}_multiseed_logs"
+    out_dir = _PROJECT_ROOT / "outputs" / f"{cfg.group}_multiseed_logs"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     detail_csv = out_dir / f"{cfg.group}_multiseed_detail.csv"
@@ -223,16 +223,10 @@ def main() -> None:
     with open(manifest_json, "w", encoding="utf-8") as f:
         json.dump({"config": asdict(cfg)}, f, indent=2)
 
-    print(f"Detail saved to: outputs_v2/{cfg.group}_multiseed_logs/{detail_csv.name}")
-    print(
-        f"Summary saved to: outputs_v2/{cfg.group}_multiseed_logs/{summary_json.name}"
-    )
-    print(
-        f"Protocol check saved to: outputs_v2/{cfg.group}_multiseed_logs/{protocol_json.name}"
-    )
-    print(
-        f"Manifest saved to: outputs_v2/{cfg.group}_multiseed_logs/{manifest_json.name}"
-    )
+    print(f"Detail saved to: {detail_csv}")
+    print(f"Summary saved to: {summary_json}")
+    print(f"Protocol check saved to: {protocol_json}")
+    print(f"Manifest saved to: {manifest_json}")
 
     print("\nProtocol check:")
     for k, v in protocol.items():

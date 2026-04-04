@@ -39,10 +39,10 @@ def apply_overrides(cfg: Config, args: argparse.Namespace) -> Config:
 
 def group_output_dir(group: str) -> Path:
     mapping = {
-        "G1": _PROJECT_ROOT / "outputs_v2" / "G1_CNN_BiLSTM_MSE",
-        "G2": _PROJECT_ROOT / "outputs_v2" / "G2_CNN_BiLSTM_MSE_MCD",
-        "G3": _PROJECT_ROOT / "outputs_v2" / "G3_CNN_BiLSTM_LinEx",
-        "G4": _PROJECT_ROOT / "outputs_v2" / "G4_CNN_BiLSTM_LinEx_MCD",
+        "G1": _PROJECT_ROOT / "outputs" / "G1_CNN_BiLSTM_MSE",
+        "G2": _PROJECT_ROOT / "outputs" / "G2_CNN_BiLSTM_MSE_MCD",
+        "G3": _PROJECT_ROOT / "outputs" / "G3_CNN_BiLSTM_LinEx",
+        "G4": _PROJECT_ROOT / "outputs" / "G4_CNN_BiLSTM_LinEx_MCD",
     }
     if group not in mapping:
         raise ValueError(f"Unsupported group: {group}")
@@ -289,7 +289,7 @@ def check_group(group: str) -> Dict[str, Any]:
     return {
         "group": group,
         "status": group_status,
-        "group_dir": f"outputs_v2/{root.name}",
+        "group_dir": f"outputs/{root.name}",
         "num_runs": int(len(run_results)),
         "pass_count": int(pass_count),
         "fail_count": int(fail_count),
@@ -333,7 +333,7 @@ def main() -> None:
 
     results = [check_group(group) for group in cfg.groups]
 
-    out_dir = _PROJECT_ROOT / "outputs_v2" / "protocol_checks"
+    out_dir = _PROJECT_ROOT / "outputs" / "protocol_checks"
     out_dir.mkdir(parents=True, exist_ok=True)
 
     detail_json = out_dir / "protocol_check_detail.json"
@@ -359,9 +359,9 @@ def main() -> None:
         )
 
     print("\nSaved files:")
-    print("outputs_v2/protocol_checks/protocol_check_detail.json")
-    print("outputs_v2/protocol_checks/protocol_check_summary.csv")
-    print("outputs_v2/protocol_checks/protocol_check_manifest.json")
+    print(str(out_dir / "protocol_check_detail.json"))
+    print(str(out_dir / "protocol_check_summary.csv"))
+    print(str(out_dir / "protocol_check_manifest.json"))
 
 
 if __name__ == "__main__":

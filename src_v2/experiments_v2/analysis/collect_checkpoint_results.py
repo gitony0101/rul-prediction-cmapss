@@ -16,7 +16,7 @@ class Config:
 
 _THIS_FILE = Path(__file__).resolve()
 _PROJECT_ROOT = _THIS_FILE.parents[3]
-_OUTPUTS_ROOT = _PROJECT_ROOT / "outputs_v2"
+_OUTPUTS_ROOT = _PROJECT_ROOT / "outputs"
 
 
 def safe_read_json(path: Path) -> Dict[str, Any]:
@@ -307,10 +307,10 @@ def main() -> None:
         f.write(md_text)
 
     print("=== Checkpoint bundle created ===")
-    print(f"Bundle directory: outputs_v2/{cfg.output_dir_name}")
-    print(f"Saved: outputs_v2/{cfg.output_dir_name}/collected_results.json")
-    print(f"Saved: outputs_v2/{cfg.output_dir_name}/collected_results.csv")
-    print(f"Saved: outputs_v2/{cfg.output_dir_name}/checkpoint_summary.md")
+    print(f"Bundle directory: outputs/{cfg.output_dir_name}")
+    print(f"Saved: outputs/{cfg.output_dir_name}/collected_results.json")
+    print(f"Saved: outputs/{cfg.output_dir_name}/collected_results.csv")
+    print(f"Saved: outputs/{cfg.output_dir_name}/checkpoint_summary.md")
 
 
 if __name__ == "__main__":
