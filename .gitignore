@@ -206,7 +206,9 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-./agents/*
-./codex/*
-AGENTS.md
-.codex/config.toml
+# Local AI workflow / private project-control files
+/.agents/
+/.codex/
+/.working_docs/
+/AGENTS.md
+/.gitignore
