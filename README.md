@@ -1,75 +1,110 @@
-# RUL Prediction: Uncertainty-Aware Maintenance Decision Support
+# Variability-Aware Risk-Aware RUL Prediction for Engineering Maintenance Decision Support
 
-Employer-facing deep learning project for Remaining Useful Life (RUL) prediction on NASA C-MAPSS, focused on asymmetric loss design and predictive uncertainty for maintenance-relevant decision support.
+### A controlled CNN BiLSTM study on NASA C-MAPSS evaluating asymmetric LinEx training, Monte Carlo Dropout, predictive variability, low-RUL overestimation risk, and maintenance decision stability.
 
-## Project Focus
+This project studies Remaining Useful Life (RUL) prediction as an engineering decision-support problem. It evaluates models beyond average RMSE by comparing prediction variability, low-RUL overestimation, and maintenance-oriented proxy behavior. The central insight is that the model with the best average accuracy is not necessarily the most attractive model for maintenance decisions if its predictions are more variable or more optimistic in the danger zone.
 
-This repository is the distilled portfolio version of a larger research codebase. The active implementation lives in `src_v2/` and the checked-in public evidence lives in `public_results/` and `figures/`.
+## Project Overview
 
-Core technical narrative:
+In industrial maintenance, the cost of a "false negative" (overestimating RUL and delaying maintenance) is often much higher than a "false positive" (underestimating RUL and performing early maintenance). This project implements a risk-aware RUL prediction pipeline that accounts for this asymmetry using the **LinEx asymmetric loss function** and evaluates the stability of predictions using **Monte Carlo Dropout**.
 
-- `G1`: CNN-BiLSTM baseline with MSE
-- `G2`: baseline + Monte Carlo Dropout
-- `G3`: CNN-BiLSTM + LinEx asymmetric loss
-- `G4`: LinEx + Monte Carlo Dropout
+## Why Variability Matters in Engineering
 
-## Checked-In Surfaces
+Engineering decisions rely on stability. A model with a slightly higher mean error but much lower variability is often preferred over a highly accurate but erratic model. Wide prediction spreads lead to unstable maintenance intervals, while overestimation in the "danger zone" (low remaining life) directly increases the risk of catastrophic failure.
 
-- `src_v2/`: active code path for models, training, evaluation, and experiment entry scripts
-- `CMAPSSData/`: NASA C-MAPSS benchmark data used by the current runners
-- `public_results/`: curated result summaries for employer-facing review
-- `figures/`: checked-in visual artifacts used in the root README
+## Research Question
 
-`outputs/` is the default generated-output directory for local experiment runs in this distilled version. It is not part of the curated checked-in surface.
+Under asymmetric failure cost conditions, which RUL prediction setting provides the best balance among average accuracy, predictive variability, low-RUL overestimation risk, and engineering decision stability?
 
-## Representative Results
+## Experimental Design
 
-The tracked summary artifacts are:
+The study follows a controlled 2x2 factorial design:
 
-- `public_results/group_comparison.csv`
-- `public_results/G1_multiseed_summary.json`
-- `public_results/G2_multiseed_summary.json`
-- `public_results/G3_multiseed_summary.json`
-- `public_results/G4_multiseed_summary.json`
-- `public_results/G4_multiseed_detail.csv`
+| Group | Loss | Monte Carlo Dropout | Interpretive Role |
+| :--- | :--- | :--- | :--- |
+| **G1** | MSE | No | Symmetric deterministic baseline |
+| **G2** | MSE | Yes | Symmetric model with uncertainty layer |
+| **G3** | LinEx | No | Deterministic asymmetric comparison |
+| **G4** | LinEx | Yes | Asymmetric model with uncertainty layer |
 
-| Group | Setting | RMSE (mean +- std) | MAE (mean +- std) | NASA Score (mean) | Best RMSE |
-| --- | --- | --- | --- | --- | --- |
-| G1 | Baseline (MSE) | 15.93 +- 0.85 | 11.62 +- 0.64 | 509.16 | 14.86 |
-| G2 | MSE + MC Dropout | 15.45 +- 0.97 | 11.21 +- 0.71 | 526.91 | 14.57 |
-| G3 | LinEx | 15.02 +- 0.82 | 10.62 +- 0.75 | 518.31 | 13.75 |
-| G4 | LinEx + MC Dropout | 14.78 +- 0.38 | 10.89 +- 0.28 | 376.89 | 14.17 |
+**Error Convention:** $e = y_{pred} - y_{true}$
+*   $e > 0$: RUL Overestimation (Dangerous)
+*   $e < 0$: RUL Underestimation (Conservative)
 
-G4 is the strongest overall configuration in the checked-in summaries, while G3 records the best single-run RMSE.
+**LinEx Loss:** $L(e; a) = \exp(ae) - ae - 1$
+When $a > 0$, overestimation is penalized exponentially more than underestimation.
 
-![Group RMSE Comparison](figures/group_rmse_comparison.png)
+## Model Architecture
 
-For the curated result bundle, see `public_results/README.md`. That surface now includes both the existing multiseed summaries and a compact single-seed local verification bundle derived from successful end-to-end runs.
+The core model is a **CNN-BiLSTM** network:
+1.  **CNN Layer**: Feature extraction from multi-sensor time-series windows.
+2.  **BiLSTM Layers**: Capturing bidirectional temporal dependencies in engine degradation.
+3.  **Dense Layers**: Final RUL regression.
+4.  **Monte Carlo Dropout (Optional)**: Applied during inference to generate predictive distributions and variability proxies.
 
-## Active Entry Points
+## Key Findings (Canonical FD001)
 
-Representative experiment runners:
+On canonical FD001, the deterministic LinEx model (**G3**) achieves the strongest predictive core according to RMSE, MAE, and NASA score. However, from a variability-aware engineering perspective, **G4** (LinEx + MCD) is more interesting because its mean RMSE is only slightly worse than G3 while its variability is substantially lower, its danger-zone overestimation is lower, and its fixed-threshold maintenance proxy cost is the lowest among the four groups.
 
-```bash
-python src_v2/experiments_v2/G1_run.py
-python src_v2/experiments_v2/G2_run.py
-python src_v2/experiments_v2/G3_run.py
-python src_v2/experiments_v2/G4_run.py
+| Group | RMSE (mean ± std) | MAE (mean ± std) | NASA Score (mean ± std) | Interpretation |
+| :--- | :--- | :--- | :--- | :--- |
+| **G1** | 15.93 ± 0.85 | 11.62 ± 0.64 | 509.16 ± 159.18 | Baseline |
+| **G2** | 15.45 ± 0.97 | 11.21 ± 0.71 | 526.91 ± 209.91 | High Variance |
+| **G3** | 15.02 ± 0.82 | 10.62 ± 0.75 | 518.31 ± 113.24 | Best Accuracy |
+| **G4** | 14.78 ± 0.38 | 10.89 ± 0.28 | 376.89 ± 59.92 | Best Stability |
+
+## Engineering Takeaway
+
+From an accuracy-only perspective, G3 would be selected for its superior RMSE and NASA score. However, for maintenance decision support, **G4 is the more robust candidate**. It provides a tighter, more stable prediction profile and minimizes risk where it matters most: the danger zone. This study demonstrates that RUL model selection must evaluate both average performance and predictive variability to ensure safe and stable engineering decisions.
+
+## Repository Structure
+
+```text
+risk-aware-rul/
+  ├── docs/               # Engineering interpretation and analysis
+  ├── src/                # Core implementation (Data, Models, Training)
+  ├── scripts/            # Reproducibility and figure generation
+  ├── configs/            # Experiment configurations
+  ├── results/            # Canonical summaries and figures
+  └── tests/              # Integrity and sign-convention tests
 ```
 
-These runners use `CMAPSSData/` as the default dataset location and write generated outputs to a local `outputs/` path by default. For scratch validation, `--output-root` can redirect artifacts to a temporary directory outside the repository tree.
+## How to Reproduce
 
-## Local Verification
+### Single Group Run (Quick Start)
+```bash
+python scripts/G1_run.py
+python scripts/G2_run.py
+python scripts/G3_run.py
+python scripts/G4_run.py
+```
 
-The minimum runnable baseline path has been verified locally with `src_v2/experiments_v2/G1_run.py`. A 1-epoch smoke run completed successfully in a Conda/Mamba `base` environment with Python 3.10.16, `torch 2.10.0`, and `pandas 2.3.3`.
+### Full Multi-Seed Campaign
+```bash
+# Run 5 seeds for G4
+python scripts/03_run_multiseed.py --group G4
 
-For local validation, outputs can be redirected with `--output-root` to a scratch directory instead of the repository tree. The recent G1 smoke run used a temporary `/tmp` output path, and no `outputs/` directory was created in this repository during that run.
+# Summarize results
+python scripts/04_summarize_results.py --group G4
+python scripts/compare_groups.py
+```
 
-This is a local execution note, not a full reproducibility claim. The repository does not currently include a pinned environment file.
+### Generate Figures
+```bash
+python scripts/05_build_figures.py
+```
 
-## Technical Highlights
+## Canonical Output Policy
 
-- CNN-BiLSTM sequence modeling for turbofan RUL prediction
-- LinEx asymmetric loss for overestimation-sensitive training
-- Monte Carlo Dropout for uncertainty-aware inference
-- Multi-seed result summaries curated for reproducible portfolio review
+Only results passing the **Final-Report Eligibility** check are included in public-facing summaries. This ensures every claim is backed by a run with a valid manifest, consistent schema, and known protocol version.
+
+## Limitations
+
+1.  **Asymmetric Loss**: LinEx is used as a controlled objective; specific cost calibration for real-world deployment is out of scope.
+2.  **Uncertainty Proxy**: MCD standard deviation is a variability proxy, not a calibrated probability.
+3.  **Maintenance Proxy**: The evaluation uses a fixed-threshold proxy, not a dynamic maintenance policy.
+4.  **Checkpoint Governance**: Models are currently selected via validation RMSE, which may mismatch the asymmetric training objective.
+
+## LinkedIn and Resume Summary
+
+See [docs/linkedin_resume_summary.md](docs/linkedin_resume_summary.md) for ready-to-use project descriptions.

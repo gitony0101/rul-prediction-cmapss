@@ -1,0 +1,11 @@
+group: G1
+loss: mse
+mcd: false
+dataset: FD001
+seed: 42
+batch_size: 128
+lr: 0.0005
+num_epochs: 100
+early_stopping: 15
+seq_len: 50
+rul_cap: 125

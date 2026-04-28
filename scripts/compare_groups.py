@@ -7,7 +7,7 @@ import pandas as pd
 
 
 _THIS_FILE = Path(__file__).resolve()
-_PROJECT_ROOT = _THIS_FILE.parents[2]
+_PROJECT_ROOT = _THIS_FILE.parents[1]
 
 GROUPS = ["G1", "G2", "G3", "G4"]
 

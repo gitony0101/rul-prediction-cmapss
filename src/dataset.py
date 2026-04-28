@@ -8,7 +8,7 @@ import pandas as pd
 import torch
 from torch.utils.data import Dataset
 
-from src_v2.rul.constants import get_all_columns
+from src.constants import get_all_columns
 
 
 class SequenceDataset(Dataset):
