@@ -55,4 +55,4 @@ def mc_dropout_predict(model, loader, device, n_samples: int):
     mean = preds_all.mean(axis=0)
     std = preds_all.std(axis=0)
 
-    return y_true_ref, mean, std, metas_ref
+    return y_true_ref, mean, std

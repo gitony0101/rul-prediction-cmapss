@@ -6,6 +6,8 @@ import numpy as np
 import torch
 
 
+from src.inference.mcd import mc_dropout_predict, _enable_dropout_only
+
 class Trainer:
     def __init__(
         self,
@@ -57,32 +59,21 @@ class Trainer:
 
         return total_loss / max(1, len(loader))
 
-    def predict(self, loader):
+    def predict_mcd(self, loader, num_samples: int):
+        return mc_dropout_predict(self.model, loader, self.device, num_samples)
+
+    def evaluate_loss_mcd(self, loader, num_samples: int):
         self.model.eval()
-
-        preds: List[np.ndarray] = []
-        trues: List[np.ndarray] = []
-        metas: List[Dict] = []
-
-        with torch.no_grad():
-            for X, y, meta in loader:
-                X = X.to(self.device)
-                pred = self.model(X).cpu().numpy()
-                true = y.cpu().numpy()
-
-                preds.append(pred)
-                trues.append(true)
-
-                batch_size = len(true)
-                for i in range(batch_size):
-                    row = {}
-                    for k, v in meta.items():
-                        if isinstance(v, list):
-                            row[k] = v[i]
-                        else:
-                            row[k] = v[i]
-                    metas.append(row)
-
-        y_pred = np.concatenate(preds) if preds else np.array([], dtype=float)
-        y_true = np.concatenate(trues) if trues else np.array([], dtype=float)
-        return y_true, y_pred, metas
+        _enable_dropout_only(self.model)
+        total_loss = 0.0
+        for X, y, _ in loader:
+            X = X.to(self.device)
+            y = y.to(self.device)
+            preds = []
+            for _ in range(num_samples):
+                pred = self.model(X)
+                preds.append(pred.detach())
+            pred_mean = torch.stack(preds).mean(dim=0)
+            loss = self.criterion(pred_mean, y)
+            total_loss += loss.item()
+        return total_loss / max(1, len(loader))
